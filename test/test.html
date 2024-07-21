@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="showzone">
+            <span>Text</span>
+            <div class="area"><p class="resultText">Your Text</p></div>
+        </div>
+        <div class="editzone">
+            <textarea type="text" name="" placeholder="Input text" id="userText">Your Text</textarea>
+            <select name="" id="styleling">
+                <option selected>None</option>
+                <option value="cursive">Cursive</option>
+            </select>
+            <input type="number" name="" id="" value='14' placeholder='Text Size in px' min='10' max='300'>
+            <div class="inputzone">
+                <input type="checkbox" name="" id="boldmaker">
+                <span>Bold</span>
+            </div>
+            <div class="inputzone">
+                <input type="checkbox" name="" id="">
+                <span>Italic</span>
+            </div>
+            <div class="inputzone">
+                <input type="checkbox" name="" id="">
+                <span>Underline</span>
+                <select name="" id="">
+                    <option value="bold">Bold</option>
+                </select>
+            </div>
+            <div class="inputzone">
+                <input type="color" name="" id="">
+                <span>Text Colour</span>
+            </div>
+            <div class="inputzone">
+                <input type="color" name="" id="">
+                <span>Background Colour</span>
+            </div>
+            <div class="inputzone">
+                <input type="color" name="" id="">
+                <span>Text Container Colour</span>
+            </div>
+            <div class="inputzone">
+                <select name="" id="">
+                    <option selected>None</option>
+                    <option value="uppercase">Uppercase</option>
+                    <option value="lowercase">Lowercase</option>
+                    <option value="capitalize">Capitalize</option>
+                    <option value="inherit">Capitalize</option>
+                    <option value="initial">Capitalize</option>
+                    <option value="capitalize">unset</option>
+                </select>
+                <span>Text Transform</span>
+            </div>
+            <div class="inputzone">
+                <input type="text" name="" id="">
+                <span>Text Spacing</span>
+            </div>
+            <div class="inputzone">
+                <input type="text" name="" id="">
+                <span>Line Height</span>
+            </div>
+            <div class="inputzone">
+                <input type="text" name="" id="">
+                <span>Text Indent</span>
+            </div>
+            <div class="inputzone">
+                <select name="" id="">
+                    <option selected>None</option>
+                    <option value="Start">Start</option>
+                    <option value="End">End</option>
+                    <option value="Right">Right</option>
+                    <option value="Center">Center</option>
+                    <option value="Justify">Justify</option>
+                    <option value="Match-patch">Match-patch</option>
+                </select>
+                <span>Text alignment</span>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function Styleing(selector,cssclass,value) {
+            
+        }
+        let text = document.querySelector('#userText');
+        let ResultZone = document.querySelector('.resultText');
+        text.addEventListener('keyup', function(){
+            ResultZone.innerHTML = text.value
+        });
+
+        document.querySelector('#boldmaker').addEventListener('checked', function(){
+            Styleing(ResultZone, fontWeight, 700);
+        })
+        
+
+    </script>
+</body>
+
+</html>
